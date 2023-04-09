@@ -18,6 +18,7 @@
 
     <!-- FontAwesome JS-->
     <script defer src="assets/fontawesome/js/all.min.js"></script>
+    <script defer src="assets/js/modal.js"></script>
 
     <!-- Plugins CSS -->
     <link rel="stylesheet" href="assets/css/atom-one-dark.min.css">
@@ -66,6 +67,36 @@
             </div><!--//container-->
         </div><!--//branding-->
     </header><!--//header-->
+
+    <div class="modal fade" tabindex="-1" id="info-modal">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sicurezza Internet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><b></b></p>
+                    <h6 class="d-flex justify-content-center align-items-center">Progetto Educazione Civica</h6>
+                    <p>
+                        <b>Autori:</b>
+                    </p>
+                    <ul>
+                        <li>Cadena Zambrano Jair Junior</li>
+                        <li>Colombo Simone</li>
+                        <li>Damico William</li>
+                        <li>Malagesi Valerio</li>
+                        <li>Moraru Liviu</li>
+                    </ul>
+
+                    <h6 style="margin-right: 1rem;" class="d-flex justify-content-end align-items-center">5C-I</h6>
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="docs-wrapper">
         <div id="docs-sidebar" class="docs-sidebar">
@@ -609,7 +640,6 @@
 
                 <footer class="footer">
                     <div class="container text-center py-5">
-                        <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
                         <small class="copyright">Designed by <a class="theme-link" href="http://themes.3rdwavemedia.com"
                                 target="_blank">Xiaoying Riley</a> for
                             developers</small>
@@ -636,42 +666,7 @@
     <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
     <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
     <script src="assets/js/docs.js"></script>
-    <script>
-        function search() {
 
-            var name = document.getElementById("searchForm").elements["searchItem"].value;
-            var pattern = name.toLowerCase();
-            var targetId = "";
-
-            var divs = document.getElementsByClassName("docs-section");
-            for (var i = 0; i < divs.length; i++) {
-                var para = divs[i].getElementsByTagName("p");
-                var index = para[0].innerText.toLowerCase().indexOf(pattern);
-                if (index != -1) {
-                    targetId = divs[i].parentNode.id;
-                    document.getElementById(targetId).scrollIntoView(
-                        { block: 'start', behavior: 'smooth' }
-                    );
-                    break;
-                }
-            }
-        }
-
-        function search_animal() {
-            let input = document.getElementById('searchbar').value
-            input = input.toLowerCase();
-            let x = document.getElementsByClassName('animals');
-
-            for (i = 0; i < x.length; i++) {
-                if (!x[i].innerHTML.toLowerCase().includes(input)) {
-                    x[i].style.display = "none";
-                }
-                else {
-                    x[i].style.display = "list-item";
-                }
-            }
-        }
-    </script>
 </body>
 
 </html>
